@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PhishAI - AI Email Security</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            🛡️
+        </div>
+
+        <div>
+            <h2>PhishAI</h2>
+            <span>AI Security</span>
+        </div>
+
+    </div>
+
+
+    <nav class="navigation">
+
+        <p class="menu-title">
+            MAIN
+        </p>
+
+        <a href="#dashboard"
+           class="nav-item active"
+           data-section="dashboard">
+
+            <span>▣</span>
+            Dashboard
+
+        </a>
+
+
+        <a href="#analyzer"
+           class="nav-item"
+           data-section="analyzer">
+
+            <span>🔍</span>
+            Analyze Email
+
+        </a>
+
+
+        <a href="#url-scanner"
+           class="nav-item"
+           data-section="url-scanner">
+
+            <span>🔗</span>
+            URL Scanner
+
+        </a>
+
+
+        <a href="#history"
+           class="nav-item"
+           data-section="history">
+
+            <span>🕘</span>
+            Analysis History
+
+        </a>
+
+
+        <p class="menu-title">
+            SECURITY
+        </p>
+
+
+        <a href="#reports"
+           class="nav-item"
+           data-section="reports">
+
+            <span>📊</span>
+            Reports
+
+        </a>
+
+
+        <a href="#settings"
+           class="nav-item"
+           data-section="settings">
+
+            <span>⚙️</span>
+            Settings
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="security-status">
+
+            <div class="status-dot"></div>
+
+            <div>
+
+                <strong>
+                    System Secure
+                </strong>
+
+                <small>
+                    Detection engine ready
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================== -->
+
+    <header class="topbar">
+
+        <div>
+
+            <h1 id="pageTitle">
+                Dashboard
+            </h1>
+
+            <p id="pageSubtitle">
+                AI-powered email security analysis
+            </p>
+
+        </div>
+
+
+        <div class="user-section">
+
+            <div class="notification">
+                🔔
+            </div>
+
+           <div class="user-avatar" id="userAvatar">
+    U
+</div>
+
+<div class="user-info">
+
+    <strong id="userName">
+        User
+    </strong>
+
+    <span id="userRole">
+        Security Analyst
+    </span>
+
+</div>
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         DASHBOARD
+    ================================================== -->
+
+    <div id="dashboardPage"
+         class="page-section">
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome-section">
+
+            <div>
+
+                <div class="welcome-label">
+                    SECURITY COMMAND CENTER
+                </div>
+
+                <h2>
+                    Protect your inbox with AI
+                </h2>
+
+                <p>
+                    Analyze suspicious emails and detect
+                    phishing attempts before they become
+                    a security threat.
+                </p>
+
+            </div>
+
+
+            <div class="ai-badge">
+                <span class="online-dot"></span>
+                AI Engine Online
+            </div>
+
+        </section>
+
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    🔍
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Analyses
+                    </span>
+
+                    <h3 id="totalAnalyses">
+                        0
+                    </h3>
+
+                    <small>
+                        All analyzed emails
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+                    ⚠️
+                </div>
+
+                <div>
+
+                    <span>
+                        Threats Detected
+                    </span>
+
+                    <h3 id="threatCount">
+                        0
+                    </h3>
+
+                    <small>
+                        Potential phishing emails
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    ✓
+                </div>
+
+                <div>
+
+                    <span>
+                        Safe Emails
+                    </span>
+
+                    <h3 id="safeCount">
+                        0
+                    </h3>
+
+                    <small>
+                        Low-risk emails
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    🎯
+                </div>
+
+                <div>
+
+                    <span>
+                        Average Risk
+                    </span>
+
+                    <h3 id="dashboardAverageScore">
+                        --
+                    </h3>
+
+                    <small>
+                        Current analysis history
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ANALYZER -->
+
+        <section class="analyzer-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <div class="section-label">
+                        EMAIL SECURITY
+                    </div>
+
+                    <h2>
+                        Analyze an Email
+                    </h2>
+
+                    <p>
+                        Paste an email below and let PhishAI
+                        identify suspicious behavior.
+                    </p>
+
+                </div>
+
+                <span class="ai-label">
+                    ✨ AI POWERED
+                </span>
+
+            </div>
+
+
+            <div class="email-input-area">
+
+                <div class="email-toolbar">
+
+                    <span>
+                        EMAIL CONTENT
+                    </span>
+
+                    <button
+                        type="button"
+                        id="clearBtn">
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+
+                <textarea
+                    id="emailInput"
+                    placeholder="Paste the suspicious email content here..."
+                ></textarea>
+
+
+                <div class="analyzer-footer">
+
+                    <span>
+                        🔒 Your email is analyzed securely
+                    </span>
+
+                    <button
+                        id="analyzeBtn"
+                        class="analyze-button">
+
+                        🤖 Analyze Email
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DASHBOARD RESULT -->
+
+        <section
+            class="analysis-result"
+            id="analysisResult"
+        >
+
+            <div class="result-header">
+
+                <div>
+
+                    <div class="section-label">
+                        AI ANALYSIS
+                    </div>
+
+                    <h2>
+                        Analysis Result
+                    </h2>
+
+                    <p>
+                        Email security analysis
+                    </p>
+
+                </div>
+
+                <div
+                    class="result-status"
+                    id="resultStatus">
+
+                    Waiting
+
+                </div>
+
+            </div>
+
+
+
+            <div class="result-grid">
+
+
+                <!-- RISK -->
+
+                <div class="risk-card">
+
+                    <!-- STEP 1: ANALYSIS MODE -->
+
+                    <div
+                        id="analysisMode"
+                        class="analysis-mode local-mode"
+                    >
+                        🟡 LOCAL SECURITY ENGINE
+                    </div>
+
+
+                    <h3>
+                        Risk Score
+                    </h3>
+
+                    <div
+                        class="risk-circle"
+                        id="riskCircle">
+
+                        <span id="riskScore">
+                            --
+                        </span>
+
+                        <small>
+                            /100
+                        </small>
+
+                    </div>
+
+                    <p id="riskText">
+                        Analyze an email to calculate risk.
+                    </p>
+
+                </div>
+
+
+
+                <!-- THREATS -->
+
+                <div class="threat-card">
+
+                    <h3>
+                        Detected Indicators
+                    </h3>
+
+                    <ul id="threatList">
+
+                        <li>
+                            <span>○</span>
+                            Waiting for analysis
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- SUMMARY -->
+
+                <div class="summary-card">
+
+                    <h3>
+                        Analysis Summary
+                    </h3>
+
+                    <p id="aiSummary">
+                        The analysis summary will appear
+                        here after you submit an email.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =================================================
+         ANALYZER PAGE
+    ================================================== -->
+
+    <div
+        id="analyzerPage"
+        class="page-section hidden-page"
+    >
+
+        <section class="page-intro">
+
+            <div>
+
+                <div class="section-label">
+                    SECURITY ANALYZER
+                </div>
+
+                <h2>
+                    Analyze Email
+                </h2>
+
+                <p>
+                    Check an email for potential phishing
+                    indicators using AI.
+                </p>
+
+            </div>
+
+            <span class="ai-label">
+                🤖 AI READY
+            </span>
+
+        </section>
+
+
+
+        <section class="analyzer-section">
+
+            <div class="email-input-area">
+
+                <div class="email-toolbar">
+
+                    <span>
+                        EMAIL CONTENT
+                    </span>
+
+                    <button
+                        type="button"
+                        id="clearBtn2">
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+
+                <textarea
+                    id="emailInput2"
+                    placeholder="Paste suspicious email here..."
+                ></textarea>
+
+
+                <div class="analyzer-footer">
+
+                    <span>
+                        🔒 Secure AI analysis
+                    </span>
+
+                    <button
+                        id="analyzeBtn2"
+                        class="analyze-button">
+
+                        🤖 Analyze Email
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section
+            id="analyzerResult"
+            class="analysis-result"
+        >
+
+            <div class="result-header">
+
+                <div>
+
+                    <div class="section-label">
+                        AI ANALYSIS
+                    </div>
+
+                    <h2>
+                        Analysis Result
+                    </h2>
+
+                    <p>
+                        Detection details
+                    </p>
+
+                </div>
+
+                <div
+                    id="resultStatus2"
+                    class="result-status">
+
+                    Waiting
+
+                </div>
+
+            </div>
+
+
+            <div class="result-grid">
+
+
+                <!-- RISK -->
+
+                <div class="risk-card">
+
+                    <!-- STEP 1: ANALYSIS MODE -->
+
+                    <div
+                        id="analysisMode2"
+                        class="analysis-mode local-mode"
+                    >
+                        🟡 LOCAL SECURITY ENGINE
+                    </div>
+
+
+                    <h3>
+                        Risk Score
+                    </h3>
+
+                    <div
+                        class="risk-circle"
+                        id="riskCircle2">
+
+                        <span id="riskScore2">
+                            --
+                        </span>
+
+                        <small>
+                            /100
+                        </small>
+
+                    </div>
+
+                    <p id="riskText2">
+                        Waiting for analysis.
+                    </p>
+
+                </div>
+
+
+                <div class="threat-card">
+
+                    <h3>
+                        Detected Indicators
+                    </h3>
+
+                    <ul id="threatList2">
+
+                        <li>
+                            <span>○</span>
+                            No analysis yet
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <h3>
+                        Analysis Summary
+                    </h3>
+
+                    <p id="aiSummary2">
+                        Submit an email to see the analysis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =================================================
+         HISTORY PAGE
+    ================================================== -->
+
+    <div
+        id="historyPage"
+        class="page-section hidden-page"
+    >
+
+        <section class="page-intro">
+
+            <div>
+
+                <div class="section-label">
+                    ACTIVITY
+                </div>
+
+                <h2>
+                    Analysis History
+                </h2>
+
+                <p>
+                    View previously analyzed emails.
+                </p>
+
+            </div>
+
+            <button
+                class="clear-history-btn"
+                id="clearHistoryBtn">
+
+                Clear History
+
+            </button>
+
+        </section>
+
+
+      <section class="history-container">
+
+    <!-- HISTORY TOOLBAR -->
+    <div class="history-toolbar">
+
+        <div class="history-search-box">
+
+            <span>🔍</span>
+
+            <input
+                type="text"
+                id="historySearch"
+                placeholder="Search history..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <div class="history-filters">
+
+            <button
+                class="history-filter active"
+                data-filter="ALL"
+            >
+                ALL
+            </button>
+
+            <button
+                class="history-filter"
+                data-filter="HIGH"
+            >
+                HIGH
+            </button>
+
+            <button
+                class="history-filter"
+                data-filter="MEDIUM"
+            >
+                MEDIUM
+            </button>
+
+            <button
+                class="history-filter"
+                data-filter="LOW"
+            >
+                LOW
+            </button>
+
+        </div>
+
+
+        <select id="historySort">
+
+            <option value="newest">
+                Newest First
+            </option>
+
+            <option value="oldest">
+                Oldest First
+            </option>
+
+            <option value="highest">
+                Highest Risk
+            </option>
+
+            <option value="lowest">
+                Lowest Risk
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- HISTORY SUMMARY -->
+
+    <div class="history-summary-bar">
+
+        <div>
+
+            <strong id="historyCount">
+                0 Scans
+            </strong>
+
+            <span>
+                analyzed emails
+            </span>
+
+        </div>
+
+        <div id="historyFilterInfo">
+            Showing all scans
+        </div>
+
+    </div>
+
+
+    <!-- HISTORY LIST -->
+
+    <div id="historyList">
+
+        <div class="empty-history">
+
+            <div class="empty-icon">
+                📭
+            </div>
+
+            <h3>
+                No analysis yet
+            </h3>
+
+            <p>
+                Analyze your first email to see it here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HISTORY DETAILS MODAL -->
+
+<div
+    id="historyDetailsModal"
+    class="history-modal hidden-page"
+>
+
+    <div class="history-modal-overlay"></div>
+
+    <div class="history-modal-card">
+
+        <div class="history-modal-header">
+
+            <div>
+
+                <div class="section-label">
+                    SECURITY REPORT
+                </div>
+
+                <h2>
+                    Scan Details
+                </h2>
+
+            </div>
+
+            <button
+                id="closeHistoryModal"
+                class="history-modal-close"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div id="historyDetailsContent"></div>
+
+    </div>
+
+</div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         URL SCANNER PAGE
+    ================================================== -->
+
+    <div
+        id="url-scannerPage"
+        class="page-section hidden-page"
+    >
+
+        <section class="page-intro">
+
+            <div>
+
+                <h2>
+                    URL Security Scanner
+                </h2>
+
+                <p>
+                    Scan a suspicious URL and identify potential
+                    phishing and security risks.
+                </p>
+
+            </div>
+
+            <span class="ai-label">
+                🔗 URL SECURITY
+            </span>
+
+        </section>
+
+
+        <!-- URL INPUT -->
+
+        <section class="url-scanner-card">
+
+            <div class="url-scanner-header">
+
+                <div class="url-scanner-icon">
+                    🔗
+                </div>
+
+                <div>
+
+                    <h2>
+                        Scan a URL
+                    </h2>
+
+                    <p>
+                        Enter the complete URL you want to analyze.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="url-input-wrapper">
+
+                <span class="url-prefix">
+                    🔗
+                </span>
+
+                <input
+                    type="text"
+                    id="urlInput"
+                    placeholder="https://example.com/login"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div class="url-scanner-actions">
+
+                <button
+                    type="button"
+                    id="clearUrlBtn"
+                    class="secondary-button"
+                >
+                    Clear
+                </button>
+
+                <button
+                    type="button"
+                    id="scanUrlBtn"
+                    class="analyze-button"
+                >
+                    🔍 Scan URL
+                </button>
+
+            </div>
+
+
+            <div class="url-security-note">
+                🔒 URL is analyzed locally before security assessment.
+            </div>
+
+        </section>
+
+
+        <!-- URL RESULT -->
+
+        <section
+            id="urlResult"
+            class="url-result-section hidden-page"
+        >
+
+            <div class="url-result-header">
+
+                <div>
+
+                    <h2>
+                        URL Security Analysis
+                    </h2>
+
+                    <p>
+                        Security assessment of the submitted URL.
+                    </p>
+
+                </div>
+
+                <div
+                    id="urlRiskBadge"
+                    class="url-risk-badge"
+                >
+                    Waiting
+                </div>
+
+            </div>
+
+
+            <!-- SCORE -->
+
+            <div class="url-result-grid">
+
+                <div class="url-score-card">
+
+                    <h3>
+                        Risk Score
+                    </h3>
+
+                    <div
+                        id="urlRiskCircle"
+                        class="url-risk-circle"
+                    >
+
+                        <strong id="urlRiskScore">
+                            --
+                        </strong>
+
+                        <span>
+                            /100
+                        </span>
+
+                    </div>
+
+                    <p id="urlRiskText">
+                        Scan a URL to calculate its security risk.
+                    </p>
+
+                </div>
+
+
+                <!-- URL INFORMATION -->
+
+                <div class="url-details-card">
+
+                    <h3>
+                        URL Information
+                    </h3>
+
+                    <div class="url-detail-row">
+
+                        <span>
+                            Protocol
+                        </span>
+
+                        <strong id="urlProtocol">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="url-detail-row">
+
+                        <span>
+                            Hostname
+                        </span>
+
+                        <strong id="urlHostname">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="url-detail-row">
+
+                        <span>
+                            HTTPS
+                        </span>
+
+                        <strong id="urlHttps">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="url-detail-row">
+
+                        <span>
+                            URL Length
+                        </span>
+
+                        <strong id="urlLength">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECURITY CHECKS -->
+
+            <div class="url-checks-card">
+
+                <h3>
+                    Security Checks
+                </h3>
+
+                <div id="urlSecurityChecks">
+
+                    <div class="url-check waiting">
+
+                        <span>
+                            ○
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Waiting for scan
+                            </strong>
+
+                            <p>
+                                Security checks will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECOMMENDATION -->
+
+            <div class="url-recommendation-card">
+
+                <div class="recommendation-icon">
+                    🛡️
+                </div>
+
+                <div>
+
+                    <h3>
+                        Security Recommendation
+                    </h3>
+
+                    <p id="urlRecommendation">
+                        Scan a URL to receive a security recommendation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =================================================
+         REPORTS PAGE
+    ================================================== -->
+
+    <div
+        id="reportsPage"
+        class="page-section hidden-page"
+    >
+
+
+        <section class="page-intro">
+
+            <div>
+
+                <div class="section-label">
+                    SECURITY COMMAND CENTER
+                </div>
+
+                <h2>
+                    Security Reports
+                </h2>
+
+                <p>
+                    Monitor threats and review every
+                    AI-powered email analysis.
+                </p>
+
+            </div>
+
+
+            <div class="report-engine-status">
+
+                <span class="online-dot"></span>
+
+                AI Engine Active
+
+            </div>
+
+        </section>
+
+
+
+        <!-- REPORT STATS -->
+
+        <section class="report-grid">
+
+
+            <div class="report-card blue-border">
+
+                <div class="report-card-top">
+
+                    <span class="report-card-icon blue">
+                        🔍
+                    </span>
+
+                    <span class="report-mini-label">
+                        ACTIVITY
+                    </span>
+
+                </div>
+
+                <p>
+                    Total Analyses
+                </p>
+
+                <h2 id="reportTotal">
+                    0
+                </h2>
+
+            </div>
+
+
+
+            <div class="report-card red-border">
+
+                <div class="report-card-top">
+
+                    <span class="report-card-icon red">
+                        ⚠️
+                    </span>
+
+                    <span class="report-mini-label">
+                        THREATS
+                    </span>
+
+                </div>
+
+                <p>
+                    Threats Detected
+                </p>
+
+                <h2 id="reportThreats">
+                    0
+                </h2>
+
+            </div>
+
+
+
+            <div class="report-card green-border">
+
+                <div class="report-card-top">
+
+                    <span class="report-card-icon green">
+                        ✓
+                    </span>
+
+                    <span class="report-mini-label">
+                        SAFE
+                    </span>
+
+                </div>
+
+                <p>
+                    Safe Emails
+                </p>
+
+                <h2 id="reportSafe">
+                    0
+                </h2>
+
+            </div>
+
+
+
+            <div class="report-card orange-border">
+
+                <div class="report-card-top">
+
+                    <span class="report-card-icon orange">
+                        🔎
+                    </span>
+
+                    <span class="report-mini-label">
+                        REVIEW
+                    </span>
+
+                </div>
+
+                <p>
+                    Suspicious Emails
+                </p>
+
+                <h2 id="reportSuspicious">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SECURITY OVERVIEW -->
+
+        <section class="report-large-card">
+
+            <div class="report-section-heading">
+
+                <div>
+
+                    <span class="report-heading-label">
+                        SECURITY OVERVIEW
+                    </span>
+
+                    <h3>
+                        Threat Distribution
+                    </h3>
+
+                </div>
+
+                <span class="report-heading-badge">
+                    LIVE DATA
+                </span>
+
+            </div>
+
+
+            <div class="report-overview-grid">
+
+
+                <div class="overview-item high">
+
+                    <div class="overview-icon">
+                        🔴
+                    </div>
+
+                    <div>
+
+                        <span>
+                            High Risk
+                        </span>
+
+                        <strong id="reportHighRisk">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="overview-item medium">
+
+                    <div class="overview-icon">
+                        🟠
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Medium Risk
+                        </span>
+
+                        <strong id="reportMediumRisk">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="overview-item low">
+
+                    <div class="overview-icon">
+                        🟢
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Low Risk
+                        </span>
+
+                        <strong id="reportLowRisk">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="overview-item score">
+
+                    <div class="overview-icon">
+                        🎯
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Average Risk
+                        </span>
+
+                        <strong>
+
+                            <span id="reportAverageScore">
+                                0
+                            </span>/100
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-message">
+
+                <div class="report-message-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <strong>
+                        AI Detection Engine
+                    </strong>
+
+                    <p id="reportAiStatus">
+                        AI-powered email analysis is active.
+                    </p>
+
+                </div>
+
+                <span class="engine-active">
+                    ACTIVE
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- THREAT ANALYSIS -->
+
+        <section class="report-large-card">
+
+            <div class="report-section-heading">
+
+                <div>
+
+                    <span class="report-heading-label">
+                        THREAT INTELLIGENCE
+                    </span>
+
+                    <h3>
+                        Detected Threat Indicators
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div id="threatSummary">
+
+                <div class="report-empty">
+
+                    <div class="empty-report-icon">
+                        📊
+                    </div>
+
+                    <strong>
+                        No threat data available
+                    </strong>
+
+                    <p>
+                        Analyze emails to generate
+                        threat intelligence.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- INDIVIDUAL REPORTS -->
+
+        <section class="report-large-card">
+
+            <div class="individual-report-title">
+
+                <div>
+
+                    <span class="report-heading-label">
+                        INVESTIGATION LOG
+                    </span>
+
+                    <h3>
+                        Individual Email Reports
+                    </h3>
+
+                    <p>
+                        Detailed security report for every
+                        analyzed email.
+                    </p>
+
+                </div>
+
+                <span
+                    id="emailReportCount"
+                    class="report-count">
+
+                    0 Reports
+
+                </span>
+
+            </div>
+
+
+            <div id="individualReports">
+
+                <div class="report-empty">
+
+                    <div class="empty-report-icon">
+                        📭
+                    </div>
+
+                    <strong>
+                        No email reports available
+                    </strong>
+
+                    <p>
+                        Analyze an email to generate
+                        its security report.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+<!-- =================================================
+     INDIVIDUAL FULL REPORT MODAL
+================================================= -->
+
+<div
+    id="individualReportModal"
+    class="history-modal hidden-page"
+>
+
+    <div
+        class="history-modal-overlay"
+        id="individualReportModalOverlay"
+    ></div>
+
+    <div
+        class="history-modal-card individual-report-modal-card"
+    >
+
+        <div class="history-modal-header">
+
+            <div>
+
+                <div class="section-label">
+                    SECURITY REPORT
+                </div>
+
+                <h2>
+                    Full Email Report
+                </h2>
+
+            </div>
+
+           <div class="report-modal-actions">
+
+    <button
+        type="button"
+        id="downloadIndividualReportPDF"
+        class="download-pdf-btn"
+    >
+        📄 Download PDF
+    </button>
+
+    <button
+        type="button"
+        id="closeIndividualReportModal"
+        class="history-modal-close"
+    >
+        ✕
+    </button>
+
+</div>
+
+        </div>
+
+        <div id="individualReportContent">
+
+        </div>
+
+    </div>
+
+</div>
+    </div>
+
+
+
+    <!-- =================================================
+         SETTINGS
+    ================================================== -->
+
+    <div
+        id="settingsPage"
+        class="page-section hidden-page"
+    >
+
+        <section class="page-intro">
+
+            <div>
+
+                <div class="section-label">
+                    CONFIGURATION
+                </div>
+
+                <h2>
+                    Settings
+                </h2>
+
+                <p>
+                    Manage your PhishAI preferences.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="settings-container">
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <div class="setting-icon blue">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            AI Detection
+                        </h3>
+
+                        <p>
+                            Enable AI-powered email analysis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        checked
+                        id="aiToggle">
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <div class="setting-icon green">
+                        🕘
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Save Analysis History
+                        </h3>
+
+                        <p>
+                            Store analyzed emails locally.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        checked
+                        id="historyToggle">
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+
+            <div class="setting-card">
+
+                <div>
+
+                    <div class="setting-icon purple">
+                        🔔
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Notifications
+                        </h3>
+
+                        <p>
+                            Show security notifications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        checked
+                        id="notificationToggle">
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <span>
+            © 2026 PhishAI
+        </span>
+
+        <span>
+            AI Email Security Platform
+        </span>
+
+    </footer>
+
+</main>
+
+
+
+<!-- =====================================================
+     SCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+node_modules/
+.env
+*.log
+data/raw/
+models/trained-models.json
+models/training-report.json

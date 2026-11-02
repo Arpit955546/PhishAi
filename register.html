@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | PhishAI</title>
+
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- LEFT SIDE -->
+        <section class="info-section">
+
+            <a href="landing.html" class="brand">
+                <span class="brand-icon">🛡️</span>
+                <span>Phish<span>AI</span></span>
+            </a>
+
+            <div class="info-content">
+
+                <div class="badge">
+                    🛡️ Cybersecurity Platform
+                </div>
+
+                <h1>
+                    Stay One Step
+                    <span>Ahead of Phishing.</span>
+                </h1>
+
+                <p>
+                    Create your PhishAI account and start analyzing
+                    suspicious emails and URLs with intelligent
+                    security tools.
+                </p>
+
+                <div class="security-points">
+
+                    <div class="security-item">
+                        <div class="check">✓</div>
+                        <div>
+                            <strong>Email Threat Detection</strong>
+                            <small>Analyze suspicious emails</small>
+                        </div>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="check">✓</div>
+                        <div>
+                            <strong>URL Security Scanner</strong>
+                            <small>Detect suspicious links</small>
+                        </div>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="check">✓</div>
+                        <div>
+                            <strong>Secure Account</strong>
+                            <small>Your credentials are protected</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                © 2026 PhishAI. All rights reserved.
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+        <section class="form-section">
+
+            <div class="form-container">
+
+                <div class="mobile-brand">
+                    <a href="landing.html" class="brand">
+                        <span class="brand-icon">🛡️</span>
+                        <span>Phish<span>AI</span></span>
+                    </a>
+                </div>
+
+                <div class="form-header">
+
+                    <div class="form-icon">
+                        👤
+                    </div>
+
+                    <h2>Create your account</h2>
+
+                    <p>
+                        Join PhishAI and protect yourself from phishing threats.
+                    </p>
+
+                </div>
+
+
+                <form id="registerForm">
+
+                    <!-- NAME -->
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">👤</span>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">✉️</span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="passwordToggle"
+                            >
+                                👁
+                            </button>
+                        </div>
+
+                        <div class="password-strength">
+                            <div class="strength-bar">
+                                <span id="strengthFill"></span>
+                            </div>
+
+                            <span id="strengthText">
+                                Minimum 6 characters
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔐</span>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="confirmPasswordToggle"
+                            >
+                                👁
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+                    <div class="terms">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            <span>
+                                I agree to the
+                                <a href="#" onclick="return false;">
+                                    Terms of Service
+                                </a>
+                                and
+                                <a href="#" onclick="return false;">
+                                    Privacy Policy
+                                </a>.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+                    <div
+                        id="message"
+                        class="message"
+                        role="alert"
+                    ></div>
+
+
+                    <!-- SUBMIT -->
+                    <button
+                        type="submit"
+                        id="registerBtn"
+                        class="register-btn"
+                    >
+                        <span id="btnText">Create Account</span>
+                        <span id="btnLoader" class="loader"></span>
+                    </button>
+
+                </form>
+
+
+                <div class="login-link">
+                    Already have an account?
+                    <a href="login.html">
+                        Sign in
+                    </a>
+                </div>
+
+                <div class="back-link">
+                    <a href="landing.html">
+                        ← Back to PhishAI
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="register.js"></script>
+
+</body>
+</html>

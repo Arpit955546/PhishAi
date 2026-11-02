@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PhishAI — Admin Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="admin-dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="brand-text">
+                <div class="brand-name">
+                    Phish<span>AI</span>
+                </div>
+
+                <div class="brand-role">
+                    Admin Panel
+                </div>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-section-title">
+                MAIN
+            </div>
+
+            <a href="#" class="admin-nav-item active">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="admin-nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Users</span>
+            </a>
+
+            <a href="#" class="admin-nav-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email Analyses</span>
+            </a>
+
+            <a href="#" class="admin-nav-item">
+                <i class="fa-solid fa-link"></i>
+                <span>URL Analyses</span>
+            </a>
+
+
+            <div class="nav-section-title">
+                SECURITY
+            </div>
+
+            <a href="#" class="admin-nav-item">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Threats</span>
+            </a>
+
+            <a href="#" class="admin-nav-item">
+                <i class="fa-solid fa-bug"></i>
+                <span>Incidents</span>
+            </a>
+
+            <a href="#" class="admin-nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Security Analytics</span>
+            </a>
+
+
+            <div class="nav-section-title">
+                SYSTEM
+            </div>
+
+            <a href="#" class="admin-nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+            <a href="#" class="admin-nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="#"
+                class="admin-nav-item logout-btn"
+                id="logoutBtn"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="admin-topbar">
+
+            <div class="topbar-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="adminSearch"
+                    placeholder="Search users, emails, URLs, threats..."
+                >
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button
+                    class="notification-btn"
+                    id="notificationBtn"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-count">
+                        3
+                    </span>
+
+                </button>
+
+
+                <div class="admin-profile">
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Arpit
+                        </strong>
+
+                        <span>
+                            Administrator
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="admin-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="dashboard-heading">
+
+                <div>
+
+                    <span class="page-eyebrow">
+                        SECURITY OVERVIEW
+                    </span>
+
+                    <h1>
+                        Welcome back, Arpit <span>👋</span>
+                    </h1>
+
+                    <p>
+                        Here's an overview of your platform
+                        security and analysis activity.
+                    </p>
+
+                </div>
+
+
+                <button class="date-selector">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span>
+                        Last 7 Days
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ================= KPI CARDS ================= -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card users-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-label">
+                            Total Users
+                        </span>
+
+                        <strong class="stat-value">
+                            128
+                        </strong>
+
+                        <span class="stat-change positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12%
+                        </span>
+
+                        <small>
+                            +14 new this week
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card email-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-label">
+                            Email Scans
+                        </span>
+
+                        <strong class="stat-value">
+                            1,842
+                        </strong>
+
+                        <span class="stat-change positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            8%
+                        </span>
+
+                        <small>
+                            +136 this week
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card url-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-label">
+                            URL Scans
+                        </span>
+
+                        <strong class="stat-value">
+                            967
+                        </strong>
+
+                        <span class="stat-change positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            24%
+                        </span>
+
+                        <small>
+                            +187 this week
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card threats-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-label">
+                            Threats Detected
+                        </span>
+
+                        <strong class="stat-value">
+                            246
+                        </strong>
+
+                        <span class="stat-change danger">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            18%
+                        </span>
+
+                        <small>
+                            +38 this week
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= DASHBOARD GRID ================= -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- THREAT ACTIVITY -->
+
+                <div class="dashboard-card threat-activity">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>
+                                Threat Activity
+                            </h2>
+
+                            <p>
+                                Number of threats detected
+                                over the last 7 days
+                            </p>
+                        </div>
+
+                        <button class="card-filter">
+                            Last 7 Days
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="chart-placeholder">
+
+                        <div class="chart-y-labels">
+                            <span>100</span>
+                            <span>75</span>
+                            <span>50</span>
+                            <span>25</span>
+                            <span>0</span>
+                        </div>
+
+                        <div class="chart-area">
+
+                            <div class="chart-grid-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="chart-line">
+
+                                <div style="height:35%"></div>
+                                <div style="height:55%"></div>
+                                <div style="height:45%"></div>
+                                <div style="height:72%"></div>
+                                <div style="height:55%"></div>
+                                <div style="height:68%"></div>
+                                <div style="height:85%"></div>
+
+                            </div>
+
+                            <div class="chart-points">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="chart-labels">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- THREAT DISTRIBUTION -->
+
+                <div class="dashboard-card threat-distribution">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>
+                                Threat Distribution
+                            </h2>
+
+                            <p>
+                                Risk severity
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="donut-area">
+
+                        <div class="donut-chart">
+
+                            <div class="donut-center">
+
+                                <strong>
+                                    246
+                                </strong>
+
+                                <span>
+                                    Total Threats
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="risk-list">
+
+                        <div class="risk-item">
+
+                            <div class="risk-name">
+                                <span class="risk-dot high"></span>
+                                <span>High Risk</span>
+                            </div>
+
+                            <strong>
+                                42%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="risk-item">
+
+                            <div class="risk-name">
+                                <span class="risk-dot medium"></span>
+                                <span>Medium Risk</span>
+                            </div>
+
+                            <strong>
+                                31%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="risk-item">
+
+                            <div class="risk-name">
+                                <span class="risk-dot low"></span>
+                                <span>Low Risk</span>
+                            </div>
+
+                            <strong>
+                                27%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RECENT ACTIVITY -->
+
+                <div class="dashboard-card recent-activity">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>
+                                Recent Activity
+                            </h2>
+
+                            <p>
+                                Latest security events
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon danger">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+
+                            <div class="activity-info">
+
+                                <strong>
+                                    Suspicious email detected
+                                </strong>
+
+                                <span>
+                                    user1@example.com
+                                </span>
+
+                            </div>
+
+                            <span class="risk-badge high">
+                                High
+                            </span>
+
+                            <time>
+                                2 min ago
+                            </time>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon warning">
+                                <i class="fa-solid fa-link"></i>
+                            </div>
+
+                            <div class="activity-info">
+
+                                <strong>
+                                    URL scanned
+                                </strong>
+
+                                <span>
+                                    user2@example.com
+                                </span>
+
+                            </div>
+
+                            <span class="risk-badge medium">
+                                Medium
+                            </span>
+
+                            <time>
+                                12 min ago
+                            </time>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon danger">
+                                <i class="fa-solid fa-shield-virus"></i>
+                            </div>
+
+                            <div class="activity-info">
+
+                                <strong>
+                                    Phishing attempt detected
+                                </strong>
+
+                                <span>
+                                    user3@example.com
+                                </span>
+
+                            </div>
+
+                            <span class="risk-badge high">
+                                High
+                            </span>
+
+                            <time>
+                                28 min ago
+                            </time>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon success">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div class="activity-info">
+
+                                <strong>
+                                    Email scanned
+                                </strong>
+
+                                <span>
+                                    user4@example.com
+                                </span>
+
+                            </div>
+
+                            <span class="risk-badge low">
+                                Low
+                            </span>
+
+                            <time>
+                                1 hour ago
+                            </time>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- THREAT CATEGORIES -->
+
+                <div class="dashboard-card threat-categories">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>
+                                Top Threat Categories
+                            </h2>
+
+                            <p>
+                                Most detected threats
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="category-list">
+
+
+                        <div class="category-item">
+
+                            <div class="category-info">
+                                <span>Phishing</span>
+                                <strong>38%</strong>
+                            </div>
+
+                            <div class="category-bar">
+                                <span style="width:38%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-item">
+
+                            <div class="category-info">
+                                <span>Malware</span>
+                                <strong>22%</strong>
+                            </div>
+
+                            <div class="category-bar">
+                                <span style="width:22%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-item">
+
+                            <div class="category-info">
+                                <span>Suspicious Links</span>
+                                <strong>18%</strong>
+                            </div>
+
+                            <div class="category-bar">
+                                <span style="width:18%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-item">
+
+                            <div class="category-info">
+                                <span>Spam</span>
+                                <strong>12%</strong>
+                            </div>
+
+                            <div class="category-bar">
+                                <span style="width:12%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="category-item">
+
+                            <div class="category-info">
+                                <span>Social Engineering</span>
+                                <strong>7%</strong>
+                            </div>
+
+                            <div class="category-bar">
+                                <span style="width:7%"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOP USERS -->
+
+                <div class="dashboard-card users-table-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>
+                                Top Active Users
+                            </h2>
+
+                            <p>
+                                Users with most activity
+                            </p>
+                        </div>
+
+                        <a href="#">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>#</th>
+                                    <th>User</th>
+                                    <th>Role</th>
+                                    <th>Analyses</th>
+                                    <th>Threats Found</th>
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>user1@example.com</td>
+                                    <td>
+                                        <span class="table-role">
+                                            User
+                                        </span>
+                                    </td>
+                                    <td>342</td>
+                                    <td>
+                                        <span class="threat-number">
+                                            56
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>user2@example.com</td>
+                                    <td>
+                                        <span class="table-role">
+                                            User
+                                        </span>
+                                    </td>
+                                    <td>298</td>
+                                    <td>
+                                        <span class="threat-number">
+                                            42
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>3</td>
+                                    <td>user3@example.com</td>
+                                    <td>
+                                        <span class="table-role">
+                                            User
+                                        </span>
+                                    </td>
+                                    <td>276</td>
+                                    <td>
+                                        <span class="threat-number">
+                                            38
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>user4@example.com</td>
+                                    <td>
+                                        <span class="table-role">
+                                            User
+                                        </span>
+                                    </td>
+                                    <td>241</td>
+                                    <td>
+                                        <span class="threat-number">
+                                            29
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SYSTEM STATUS -->
+
+                <div class="dashboard-card system-status">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>
+                                System Status
+                            </h2>
+
+                            <p>
+                                Current service health
+                            </p>
+                        </div>
+
+                        <span class="status-live">
+                            <span></span>
+                            Live
+                        </span>
+
+                    </div>
+
+
+                    <div class="system-list">
+
+
+                        <div class="system-item">
+
+                            <span>
+                                <i class="fa-solid fa-server"></i>
+                                API Server
+                            </span>
+
+                            <strong class="online">
+                                <i class="fa-solid fa-circle"></i>
+                                Online
+                            </strong>
+
+                        </div>
+
+
+                        <div class="system-item">
+
+                            <span>
+                                <i class="fa-solid fa-database"></i>
+                                Database
+                            </span>
+
+                            <strong class="online">
+                                <i class="fa-solid fa-circle"></i>
+                                Online
+                            </strong>
+
+                        </div>
+
+
+                        <div class="system-item">
+
+                            <span>
+                                <i class="fa-solid fa-shield-halved"></i>
+                                Threat Detection
+                            </span>
+
+                            <strong class="online">
+                                <i class="fa-solid fa-circle"></i>
+                                Online
+                            </strong>
+
+                        </div>
+
+
+                        <div class="system-item">
+
+                            <span>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email Analysis
+                            </span>
+
+                            <strong class="online">
+                                <i class="fa-solid fa-circle"></i>
+                                Online
+                            </strong>
+
+                        </div>
+
+
+                        <div class="system-item">
+
+                            <span>
+                                <i class="fa-solid fa-link"></i>
+                                URL Analysis
+                            </span>
+
+                            <strong class="online">
+                                <i class="fa-solid fa-circle"></i>
+                                Online
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin-dashboard.js"></script>
+
+</body>
+
+</html>
